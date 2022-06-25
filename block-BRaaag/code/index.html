@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h2>Movie Watch List</h2>
+        <input type="text" class="input">
+        <p class="root"></p>
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        var root = document.querySelector('.root');
+var input = document.querySelector('.input');
+
+let movie = JSON.parse(localStorage.getItem('movies')) || [];
+
+function display(event){
+    if(event.keyCode === 13 && event.target.value !== ""){
+        var m = {
+            name:event.target.value,
+            isWatch:""
+        }
+        movie.push(m);
+        event.target.value =" ";
+        createUI()
+    }
+    localStorage.setItem("movies",JSON.stringify(movie));
+}
+
+function checks(event){
+    let id = event.target.dataset.id;
+    movie[id].isWatch ? "watch" : "Watched";
+    localStorage.setItem("movies",JSON.stringify(movie));
+    createUI()
+}
+
+
+function createUI(){
+    var ul =  movie.map((ele,index) => {
+        // console.log(ele.isWatch);
+        // var ul = React.createElement("li",{
+        //     className: "list"
+        // }, ele.name, React.createElement("button", {
+        //     className:"btn",
+        //     "data-id": index,
+        //     onclick: checks
+        // }, ele.isWatch ? "watch" : "Watched"));
+        return <li className="list">{ele.name}<button className="btn" data-id="index" onclick="checks">{"Watched"}</button></li>;
+    })   
+    ReactDOM.render(ul, root);
+}
+
+input.addEventListener('keyup', display);
+      </script>
+</body>
+</html>
