@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        var root = document.querySelector('#root');
+        let cardInfo = {
+                          title: 'City Lights in New York',
+                          date: new Date('2017-01-26'),
+                          comments: 67,
+                          subTitle: 'The city that never sleeps.',
+                          description:
+                            'New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.',
+                          category: 'photos',
+                          imageURL:
+                            'https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+            };
+        var display = <>
+              <div className="container">
+                <div className="m-auto w-50 text-center main">
+                    <img className="w-100" src={cardInfo.imageURL} alt={cardInfo.category}/>
+                    <div className="parent"><span className="category">{cardInfo.category.toUpperCase()}</span></div>
+                    <div className="mt-3">
+                        <h1>{cardInfo.title}</h1>
+                        <h3 className="p-2 subTitle">{cardInfo.subTitle}</h3>
+                        <p className="description">{cardInfo.description}</p>
+
+                    </div>
+                </div>
+              </div>  
+        </>
+        ReactDOM.render(display, root);
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/485c880cb0.js" crossorigin="anonymous"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root" class="box container">
+    </div>
+    <!-- <div class="box">
+        <img src="https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="">
+        <img src="https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="">
+        <img src="https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="">
+    </div> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let articles = [
+          {
+            title: 'City Lights in New York',
+            date: new Date('2017-01-26'),
+            comments: 67,
+            subTitle: 'The city that never sleeps.',
+            description:
+              'New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.',
+            category: 'photos',
+            imageURL:
+              'https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+          },
+          {
+            title: 'Twitter’s decentralized future',
+            date: new Date('2021-01-16'),
+            comments: 43,
+            subTitle: 'The decentralized future of twitter.',
+            description:
+              'The platform’s vision of a sweeping open standard could also be the far-right’s internet endgame',
+            category: 'social network',
+            imageURL:
+              'https://techcrunch.com/wp-content/uploads/2019/09/twitter-hidden-replies1.png?resize=1536,816',
+          },
+          {
+            title:
+              'Startups look beyond lidar for autonomous vehicle perception',
+            date: new Date('2017-07-26'),
+            comments: 17,
+            subTitle:
+              'Lidar pushed ahead of traditional cameras because it could do things they couldn’t',
+            description:
+              'Last CES was a time of reckoning for lidar companies, many of which were cratering due to a lack of demand from a (still) non-existent autonomous vehicle industry. ',
+            category: 'future',
+            imageURL:
+              'https://techcrunch.com/wp-content/uploads/2019/07/GettyImages-846875220.jpg?w=1390&crop=1',
+          },
+        ];
+        var li = (type) => { return React.createElement(type)};
+        let Display = (props) => {
+            return (
+                <>
+                    <div className="box2">
+                        <img className="img" src={props.ele.imageURL} alt=""/>
+                        <h3 className="title">{props.ele.title}</h3>
+                        <h5 className="subTitle">{props.ele.subTitle}</h5>
+                        <p>{props.ele.description}</p>
+                        <p><span className="time">o 6mins ago</span><span className="comment"><i class="fa-solid fa-comments"></i> {props.ele.comments}</span> </p>
+                    </div>
+                </>
+            );
+        };
+        let show =  articles.map((ele) => {
+            return  <Display ele={ele} />
+        })
+        ReactDOM.render(show, document.getElementById("root"));
+    </script>
+</body>
+</html>
+<!-- var data = props.ele.map((ele) => ele); -->

@@ -1,0 +1,23 @@
+.main {
+    border: 10px solid rgb(182, 175, 175);
+    margin-top: 10px;
+}
+.subTitle {
+    color: rgb(221, 146, 158);
+}
+.description {
+    font-weight: 700;
+}
+.parent {
+    position: relative;
+}
+.category {
+    background-color: rgb(221, 146, 158);
+    padding: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 32px;
+    position: relative;
+    right: 232px;
+    bottom: 65px;
+}
