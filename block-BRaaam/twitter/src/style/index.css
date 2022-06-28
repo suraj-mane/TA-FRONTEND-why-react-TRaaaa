@@ -1,0 +1,77 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+#root {
+    display: flex;
+}
+ul {
+    list-style: none;
+}
+.icon {
+    font-size: 18px;
+    padding: 10px 0;
+}
+.icon-name {
+    padding-left: 20px;
+    font-weight: 700;
+}
+.active {
+    color: #1DA1F2;
+}
+.btn {
+    background-color: #1DA1F2;
+    padding: 0 30px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+.p-info {
+    margin-left: 20px;
+    margin-top: 5rem;
+}
+.p-icon {
+    background-color: #1DA1F2;
+    padding: 15px;
+    border-radius: 50%;
+}
+.p-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+.m-main {
+    margin-left: 30px;
+    width: 750px;
+}
+.m-main-1 {
+    border: 1px solid black;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.m-profile {
+    margin: 10px;
+}
+.m-profile-post {
+    opacity: 0.5;
+}
+.m-main-2 {
+    border: 1px solid black;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.search-bar {
+    border: 1px solid grey;
+    border-radius: 40px;
+    background-color: rgb(234, 231, 231);
+    padding: 5px;
+    width: 320px;
+}
+.box {
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(234, 231, 231);
+}
+.s-box {
+    margin-top: 9rem;
+}
