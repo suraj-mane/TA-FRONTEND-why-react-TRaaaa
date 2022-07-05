@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.btn1 {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+.btn2 {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+.btn3 {
+  background-color: grey;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+.btn4 {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+  padding: 10px 20px;
+}
+.btn5 {
+  color: grey;
+  border: 2px solid grey;
+  padding: 10px 20px;
+}
+.btn6 {
+  color: blue;
+  border: none;
+}
+
+.btn7 {
+  color: grey;
+  border: none;
+}
