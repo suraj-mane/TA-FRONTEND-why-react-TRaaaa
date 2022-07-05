@@ -75,3 +75,18 @@
   color: grey;
   border: none;
 }
+.btn8 {
+  padding: 8px 15px;
+  background-color: blue;
+  color: white;
+}
+.btn9 {
+  padding: 10px 40px;
+  background-color: blue;
+  color: white;
+}
+.btn10 {
+  border: 2px solid blue;
+  color: blue;
+  padding: 10px 40px;
+}
